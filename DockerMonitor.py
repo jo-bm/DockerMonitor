@@ -55,6 +55,12 @@ def rm_all_img():
     else:
         print('No')
 
+def print_imgs():
+    result = subprocess.run(["docker", "images", "-q"], stdout=subprocess.PIPE)
+    imgs = result.stdout.decode("utf-8")
+
+    result = subprocess.run(["zenity", "--info", f"--text={imgs}"], stdout=subprocess.PIPE)
+
 def rm_imgonly():
     # Get the text entered by the user
     text = entryimg.get()
@@ -105,6 +111,10 @@ button.pack()
 
 button = Button(root, text="rm only",font="Ariel,30",bg='#3B6E07',fg='#000000', command=rm_imgonly)
 button.pack()
+
+button = Button(root, text="print ids",font="Ariel,30",bg='#3B6E07',fg='#000000', command=print_imgs)
+button.pack()
+
 entryimg = Entry(root)
 entryimg.pack()
 
