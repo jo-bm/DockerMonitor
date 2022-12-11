@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-#sudo apt install dialog
 
 import subprocess
 from tkinter import *
+
+sep = '-'*100
 
 root = Tk()
 root.geometry("1200x800")
@@ -99,6 +100,7 @@ button.pack()
 entrycont = Entry(root)
 entrycont.pack()
 
+Label(text=f'{sep}',font="Ariel,30",bg='#300A24',fg='#3465A3').pack()
 
 
 Label(text='\nImages:',font="Ariel,30",bg='#300A24',fg='#3465A3').pack()
@@ -107,7 +109,7 @@ log2.pack()
 
 button = Button(root, text="rm all imgs",font="Ariel,30",bg='#3B6E07',fg='#000000', command=rm_all_img)
 button.pack()
-
+#button.place(x=70,y=130)
 
 button = Button(root, text="rm only",font="Ariel,30",bg='#3B6E07',fg='#000000', command=rm_imgonly)
 button.pack()
@@ -118,6 +120,7 @@ button.pack()
 entryimg = Entry(root)
 entryimg.pack()
 
+Label(text=f'{sep}',font="Ariel,30",bg='#300A24',fg='#3465A3').pack()
 
 Label(text='\nVolumes:',font="Ariel,30",bg='#300A24',fg='#3465A3').pack()
 log3 = Label(text='abc',font="Ariel",bg='#300A24',fg='#3B6E07')
