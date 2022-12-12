@@ -65,7 +65,8 @@ def print_imgs():
 def rm_imgonly():
     # Get the text entered by the user
     text = entryimg.get()
-    subprocess.run(["docker", "image", "rm", "-f", text], stdout=subprocess.PIPE)
+    for i in text.split():
+        subprocess.run(["docker", "image", "rm", "-f", i], stdout=subprocess.PIPE)
 
 def display_vols():
     result = subprocess.run(["docker", "volume","ls"], stdout=subprocess.PIPE)
