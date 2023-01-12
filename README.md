@@ -2,13 +2,15 @@
 
 A simple and easy to use GUI application that allows you to interact with Docker containers, images, and volumes. 
 
+![screenshot](https://i.imgur.com/4JpnvSA.png)
+
 ## Features
-- Display all containers
+- Display all containers live
 - Remove all containers
 - Remove specific container
-- Display all images
-- Remove all images
+- Display all images id (for copy them and paste it for bulk remove)
 - Remove specific images
+- Remove all images
 - Display all volumes
 - Remove all volumes
 
